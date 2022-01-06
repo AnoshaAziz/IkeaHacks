@@ -1,0 +1,191 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hacks",
+		"_postman_id": "02c6787a-ce58-01a6-2e30-64a72a0f051d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"url": "http://localhost:2000/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-new-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ3MmFjZGEzZmM3ZmNkODY2OTEyODUiLCJpYXQiOjE2NDE0OTU5NzcsImV4cCI6MTY0MTQ5OTU3N30.2eUuQJrefzGsRcf-ycMBm_Bv49suEfeqY9S40HhODUA",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Anosha\",\n\t\"email\":\"Anoshaaziz12@gmail.com\",\n\t\"password\":\"Anosha1!\"\n\t\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User Authentication",
+					"request": {
+						"url": "http://localhost:2000/authentication",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"Anoshaaziz@gmail.com\",\n\t\"password\":\"Anosha1!\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hacks",
+			"description": "",
+			"item": [
+				{
+					"name": "Create new Hack",
+					"request": {
+						"url": "http://localhost:2000/hacks",
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-new-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ3NzBmMjBkOWNmY2MyNWI0NWE0YTAiLCJpYXQiOjE2NDE1MTAyMjEsImV4cCI6MTY0MTUxMzgyMX0.15wJbjgML62meJVrMXszu_KP0hQOINOmuwOY61a_rEI",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\":\"Ikea bathroom hack\",\n\t\"Category\":\"Swimm\",\n\t\"Tags\":\"Modes,Western\",\n\t\"Description\":\"Purpose of Cleaniness\",\n\t\"ImageUrl\":\"https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg\"\n\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Hacks",
+					"request": {
+						"url": "http://localhost:2000/hacks/61d7724db5ebcf3ab2bf7f28",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-new-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ3NzBmMjBkOWNmY2MyNWI0NWE0YTAiLCJpYXQiOjE2NDE1MDk0MDIsImV4cCI6MTY0MTUxMzAwMn0.9B10OSmeGHYxs3D-CE1ketwzfsMhjXRQiR-7igHFHVQ",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\":\"Urbans\",\n\t\"Category\":\"Swimm\",\n\t\"Tags\":\"Modes,ABC\",\n\t\"defaultImage\":\"https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hacks",
+					"request": {
+						"url": "http://localhost:2000/hacks",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-new-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ3NzBmMjBkOWNmY2MyNWI0NWE0YTAiLCJpYXQiOjE2NDE1MTAyMjEsImV4cCI6MTY0MTUxMzgyMX0.15wJbjgML62meJVrMXszu_KP0hQOINOmuwOY61a_rEI",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"dddd11\",\n\"movieId\":\"61b7962df3b8c76ff0e9c75f\",\n\"genreId\":\"61b7961563f2aee4c69d3a64\",\n\"value\":2\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hacks by Id",
+					"request": {
+						"url": "http://localhost:2000/hacks/61d7724db5ebcf3ab2bf7f28",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-new-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ3NzBmMjBkOWNmY2MyNWI0NWE0YTAiLCJpYXQiOjE2NDE1MTAyMjEsImV4cCI6MTY0MTUxMzgyMX0.15wJbjgML62meJVrMXszu_KP0hQOINOmuwOY61a_rEI",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hack",
+					"request": {
+						"url": "http://localhost:2000/hacks/61d73321eb5c4152c6820a17",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-new-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQ3MmFjZGEzZmM3ZmNkODY2OTEyODUiLCJpYXQiOjE2NDE0OTI4NjAsImV4cCI6MTY0MTQ5NjQ2MH0.9EN441QJSHajZI9lTf-BDLBHsKKKpJ2jXk-pKO_5C98",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
